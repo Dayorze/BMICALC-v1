@@ -1,0 +1,38 @@
+<BMILayout>:
+    orientation: 'vertical'
+
+    GridLayout:
+        cols: 2
+        row_default_height: 50
+        row_force_default: True
+
+        Label:
+            text: 'Height (cm):'
+            size_hint_x: None
+            width: 120
+            
+        TextInput:
+            multiline: False
+            size_hint_x: None
+            width: 120
+
+        Label:
+            text: 'Weight (kg):'
+            size_hint_x: None
+            width: 120
+            
+        TextInput:
+            multiline: False
+            size_hint_x: None
+            width: 120
+
+    Label:
+        text: ''
+        size_hint: (1, None)
+        height: 50
+
+    Button:
+        text: 'Calculate'
+        size_hint: (1, None)
+        height: 50
+        on_release: root.calculate_bmi(self)
